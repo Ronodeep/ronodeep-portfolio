@@ -23,7 +23,7 @@ Because this is built with Vanilla HTML/CSS/JS, updates are trivial and don't re
    - For new skills, add `<div class="chip">SkillName</div>` within the appropriate grid quadrant in the `#skills` section.
 
 2. **Changing Resumes / Assets:**
-   - Replace the `CV_2026-01-07_Ronodeep_Bhattacharya.pdf` file with your updated resume, and change the `href` in the "Download Blueprint" anchor tag in the Hero Section of `index.html`.
+   - Drop your customized PDF file into the `resources/` directory and explicitly name it `Ronodeep_Bhattacharya_Resume.pdf`. Because the filename is standardized, this automatically updates the Hero Section download link without you needing to edit `index.html`. Any other static assets, images, or icons (like `favicon.svg`) should also live in the `resources/` folder.
 
 3. **Styling / Theming tweaks:**
    - Open `styles/index.css`.
