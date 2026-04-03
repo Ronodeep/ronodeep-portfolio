@@ -37,5 +37,28 @@ Because this is built with Vanilla HTML/CSS/JS, updates are trivial and don't re
      ```
      Navigate to `http://localhost:8000`.
 
-## Deployment
-Push changes directly to the `main` branch. GitHub Pages can be configured in your repository settings to serve directly from the `/` root folder. No GitHub Actions or CI pipeline configurations are inherently required, though one can be added for linting.
+## Deployment & Workflow
+
+To maintain a resilient and professional deployment pipeline, avoid pushing directly to `main`. Follow this standard lifecycle:
+
+1. **Create a Feature Branch:**
+   Branch off of `main` for your updates (e.g., updating a resume or adding a new skill).
+   ```bash
+   git checkout -b feature/update-resume
+   ```
+
+2. **Commit Your Changes:**
+   Execute your changes locally and commit them with semantic messages.
+   ```bash
+   git add .
+   git commit -m "docs: updated cv to latest version"
+   ```
+
+3. **Open a Pull Request:**
+   Push the branch to your remote repository and open a Pull Request against `main`. This allows you to verify diffs before they go live.
+   ```bash
+   git push -u origin feature/update-resume
+   ```
+
+4. **Merge & Auto-Deploy:**
+   Once the code is verified, merge the Pull Request into `main`. GitHub Pages is natively configured to listen to the `main` branch and will automatically trigger a build, deploying your updated site within ~30-60 seconds.
